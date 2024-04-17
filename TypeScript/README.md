@@ -1,4 +1,4 @@
-Typescript
+![image](https://github.com/TessierV/holbertonschool-web_react/assets/113889290/23aa0552-ea43-46aa-a1df-d067d074d358)
 
 # Overview
 This repository contains a TypeScript project with configurations for webpack, ESLint, and TypeScript compiler. The project aims to demonstrate various concepts of TypeScript, including interfaces, functions, and bundling using webpack.
@@ -19,3 +19,8 @@ This repository contains a TypeScript project with configurations for webpack, E
 
 ## Note
 add ``"skipLibCheck": true"`` inside tsconfig.json
+
+<br><br>
+
+<br/><hr>
+<p align="right">Holberton TOULOUSE</p>
