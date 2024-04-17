@@ -23,9 +23,6 @@ module.exports = {
   devServer: {
     contentBase: "./dist"
   },
-  optimization: {
-    minimize: false, // Disable minimization
-  },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
