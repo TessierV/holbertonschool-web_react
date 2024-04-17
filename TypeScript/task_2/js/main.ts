@@ -66,13 +66,13 @@ export function executeWork(employee: Director | Teacher): string {
 }
 
 // Define a string literal type for subjects
-export type Subjects = 'Math' | 'History';
+export type Subjects = "Math" | "History";
 
 // Function to teach a class based on the subject
 export function teachClass(todayClass: Subjects): string {
-  if (todayClass === 'Math') {
-    return 'Teaching Math';
-  } else if (todayClass === 'History') {
-    return 'Teaching History';
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else if (todayClass === "History") {
+    return "Teaching History";
   }
 }
