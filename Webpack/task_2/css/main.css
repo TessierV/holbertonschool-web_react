@@ -1,10 +1,10 @@
 /* main.css */
-.counter {
+p.counter {
     font-weight: bold;
     float: right;
 }
 
-#logo {
+div#logo {
     width: 200px;
     height: 200px;
     background-image: url('../assets/holberton-logo.jpg');
