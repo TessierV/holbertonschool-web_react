@@ -9,6 +9,8 @@ $('body').append(
   $('<p>').text('Copyright - Holberton School'),
 )
 
+_.debounce(updateCounter, 500);
+
 function updateCounter() {
   let countTag = $('#count');
   let count = parseInt(countTag.attr('click_count')) || 0;
@@ -19,5 +21,5 @@ function updateCounter() {
   });
 }
 
-_.debounce(updateCounter, 500);
+
 updateCounter();
