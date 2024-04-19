@@ -10,6 +10,7 @@ $('body').append(
   $('<p>').text('Copyright - Holberton School'),
 )
 
+_.debounce(updateCounter, 500);
 
 function updateCounter() {
   let countTag = $('#count');
@@ -21,5 +22,5 @@ function updateCounter() {
   });
 }
 
-_.debounce(updateCounter, 500);
+
 updateCounter();
