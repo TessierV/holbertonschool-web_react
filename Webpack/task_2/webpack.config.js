@@ -1,20 +1,23 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'production',
     entry: './js/dashboard_main.js',
     output: {
-        path: path.resolve(__dirname, "public"),
-        filename: "bundle.js"
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'public'),
     },
-    mode: 'production',
     module: {
-        rules: [{
-            test: /\.css$/,
-            use: ['style-loader', 'css-loader']
-        },
-        {
-            test: /\.(png|jp(e*)g|svg)$/,
-            use: ['file-loader', 'image-webpack-loader']
-        }]
-    }
-}
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                type: 'asset/resource',
+                use: ['file-loader', 'image-webpack-loader']
+            },
+        ],
+    },
+};
