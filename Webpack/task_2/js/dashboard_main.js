@@ -1,7 +1,7 @@
 const $ = require('jquery');
 const _ = require('lodash');
 
-import '../css/main.css';
+
 
 $('body').append(
   $('<p>').text('Holberton Dashboard'),
