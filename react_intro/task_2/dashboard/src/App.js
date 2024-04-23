@@ -15,14 +15,13 @@ function App() {
         </header>
         <body className="App-body">
           <p>Login to access the full dashboard</p>
-          <label htmlFor="email" className="input-label">Email:</label>
-<input type="email" id="email" className="input-field" />
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" />
 
-<label className="input-label" htmlFor="password">Password:</label>
-<input type="password" id="password" className="input-field" />
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" />
 
-<button className="input-button">OK</button>
-
+          <button>OK</button>
         </body>
       </div>
       <footer className="App-footer">{footerCopy} &copy; {getFullYear()}</footer>

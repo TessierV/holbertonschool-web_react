@@ -9,7 +9,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 90vh;
+  min-height: 75vh;
 }
 
 .App-logo {
@@ -34,13 +34,11 @@
 
 }
 
-
 .App-body label,
 .App-body input,
 .App-body button {
   margin-right: 10px;
 }
-
 
 .App-footer {
   border-top: 5px solid #E1003C;
