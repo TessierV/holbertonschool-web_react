@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/holbertonschool-web_react/react_intro/task_4/dashboard/public/static/css/main.b7d9a30c.css",
-    "main.js": "/holbertonschool-web_react/react_intro/task_4/dashboard/public/static/js/main.841c020d.js",
-    "static/js/453.59b8a61b.chunk.js": "/holbertonschool-web_react/react_intro/task_4/dashboard/public/static/js/453.59b8a61b.chunk.js",
-    "static/media/logo.jpg": "/holbertonschool-web_react/react_intro/task_4/dashboard/public/static/media/logo.24bab5d633e36ca8d17e.jpg",
-    "index.html": "/holbertonschool-web_react/react_intro/task_4/dashboard/public/index.html",
-    "main.b7d9a30c.css.map": "/holbertonschool-web_react/react_intro/task_4/dashboard/public/static/css/main.b7d9a30c.css.map",
-    "main.841c020d.js.map": "/holbertonschool-web_react/react_intro/task_4/dashboard/public/static/js/main.841c020d.js.map",
-    "453.59b8a61b.chunk.js.map": "/holbertonschool-web_react/react_intro/task_4/dashboard/public/static/js/453.59b8a61b.chunk.js.map"
+    "main.css": "/holbertonschool-web_react/react_intro/task_4/dashboard/static/css/main.b7d9a30c.css",
+    "main.js": "/holbertonschool-web_react/react_intro/task_4/dashboard/static/js/main.d36f5cfe.js",
+    "static/js/453.59b8a61b.chunk.js": "/holbertonschool-web_react/react_intro/task_4/dashboard/static/js/453.59b8a61b.chunk.js",
+    "static/media/logo.jpg": "/holbertonschool-web_react/react_intro/task_4/dashboard/static/media/logo.24bab5d633e36ca8d17e.jpg",
+    "index.html": "/holbertonschool-web_react/react_intro/task_4/dashboard/index.html",
+    "main.b7d9a30c.css.map": "/holbertonschool-web_react/react_intro/task_4/dashboard/static/css/main.b7d9a30c.css.map",
+    "main.d36f5cfe.js.map": "/holbertonschool-web_react/react_intro/task_4/dashboard/static/js/main.d36f5cfe.js.map",
+    "453.59b8a61b.chunk.js.map": "/holbertonschool-web_react/react_intro/task_4/dashboard/static/js/453.59b8a61b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b7d9a30c.css",
-    "static/js/main.841c020d.js"
+    "static/js/main.d36f5cfe.js"
   ]
 }
