@@ -1,26 +1,26 @@
-import React from 'react';
-import { shallow } from 'enzyme';
 import { getFullYear, getFooterCopy, getLatestNotification } from './utils';
-import App from './App';
 
-describe('App component', () => {
-  it('renders without crashing', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.exists()).toBe(true);
+describe('getFullYear', () => {
+  it('returns the correct year', () => {
+    const currentYear = (new Date()).getFullYear();
+    expect(getFullYear()).toBe(currentYear);
+  });
+});
+
+describe('getFooterCopy', () => {
+  it('returns "Holberton School" when argument is true', () => {
+    expect(getFooterCopy(true)).toBe('Holberton School');
   });
 
-  it('renders a div with the class App-header', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find('.App-header').exists()).toBe(true);
+  it('returns "Holberton School main dashboard" when argument is false', () => {
+    expect(getFooterCopy(false)).toBe('Holberton School main dashboard');
   });
+});
 
-  it('renders a div with the class App-body', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find('.App-body').exists()).toBe(true);
-  });
-
-  it('renders a div with the class App-footer', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find('.App-footer').exists()).toBe(true);
+describe('getLatestNotification', () => {
+  it('returns the correct string', () => {
+    const notificationString = getLatestNotification();
+    expect(notificationString).toContain('<strong>Urgent requirement</strong>');
+    expect(notificationString).toContain('complete by EOD');
   });
 });
