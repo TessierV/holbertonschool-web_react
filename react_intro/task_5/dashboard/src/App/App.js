@@ -3,6 +3,7 @@ import './App.css';
 import { getFullYear, getFooterCopy } from '../utils/utils';
 import logo from '../assets/logo.jpg';
 
+
 function App() {
   const isIndex = true;
   const footerCopy = getFooterCopy(isIndex);
