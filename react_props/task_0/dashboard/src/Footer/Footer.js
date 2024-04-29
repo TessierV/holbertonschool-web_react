@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <>
-      <footer className="App-footer">{getFooterCopy()} &copy; {getFullYear()}</footer>
+      <footer className="App-footer">Copyright {getFooterCopy()} &copy; {getFullYear()}</footer>
     </>
   );
 }
