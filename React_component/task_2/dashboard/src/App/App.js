@@ -15,10 +15,15 @@ class App extends Component {
     this.handleLogout = this.handleLogout.bind(this);
   }
   componentDidMount() {
-    window.addEventListener('keydown', this.handleLogout);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', this.handleLogout);
+    }
   }
+
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleLogout);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', this.handleLogout);
+    }
   }
   handleLogout(e) {
     if (e.ctrlKey && e.key === 'h') {
