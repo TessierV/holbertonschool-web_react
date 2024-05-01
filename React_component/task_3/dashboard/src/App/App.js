@@ -53,15 +53,19 @@ class App extends Component {
           </div>
 
           <div className="App-body border">
-            {isLoggedIn === false ? <Login /> : <CourseList listCourses={listCourses} />}
+            {isLoggedIn === false ?
+              <BodySectionWithMarginBottom title="Log in to continue">
+                <Login />
+              </BodySectionWithMarginBottom>
+              :
+              <BodySectionWithMarginBottom title="Course list">
+                <CourseList listCourses={listCourses} />
+              </BodySectionWithMarginBottom>
+            }
           </div>
 
-          <BodySectionWithMarginBottom title="test MarginBottom">
-            <p>test BodySectionWithMarginBottom</p>
-          </BodySectionWithMarginBottom>
-
-          <BodySection title="test">
-            <p>test</p>
+          <BodySection title="News from the School">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </BodySection>
 
           <div className="App-footer border">
