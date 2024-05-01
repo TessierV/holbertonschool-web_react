@@ -8,7 +8,7 @@ import './App.css';
 import CourseList from '../CourseList/CourseList';
 import PropTypes from 'prop-types';
 import BodySection from '../BodySection/BodySection';
-
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -55,6 +55,10 @@ class App extends Component {
           <div className="App-body border">
             {isLoggedIn === false ? <Login /> : <CourseList listCourses={listCourses} />}
           </div>
+
+          <BodySectionWithMarginBottom title="test MarginBottom">
+            <p>test BodySectionWithMarginBottom</p>
+          </BodySectionWithMarginBottom>
 
           <BodySection title="test">
             <p>test</p>
