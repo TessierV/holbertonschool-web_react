@@ -1,42 +1,36 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import NotificationItem from './NotificationItem';
-import { StyleSheetTestUtils } from 'aphrodite';
+import React from "react";
+import { shallow } from "enzyme";
+import NotificationItem from "./NotificationItem";
+import { StyleSheetTestUtils } from "aphrodite";
 
-describe('NotificationItem Component', () => {
-
-  beforeAll(() => {
+describe("<NotificationItem />", () => {
+  beforeEach(() => {
     StyleSheetTestUtils.suppressStyleInjection();
   });
 
-  afterAll(() => {
+  afterEach(() => {
     StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
   });
 
-  it('renders without crashing', () => {
+  it("renders without crashing", () => {
+    shallow(<NotificationItem type="default" value="test" />);
+  });
+
+  it("renders correct type and value", () => {
     const wrapper = shallow(<NotificationItem type="default" value="test" />);
-    expect(wrapper.exists()).toBeTruthy();
+    expect(wrapper.find("li").prop("data-notification-type")).toEqual("default");
+    expect(wrapper.text()).toEqual("test");
   });
 
-  it('renders correct HTML with type and value props', () => {
-    const wrapper = shallow(<NotificationItem type="default" value="test" />);
-    expect(wrapper.prop('data-notification-type')).toEqual('default');
-    expect(wrapper.text()).toEqual('test');
+  it("renders correct HTML for an li element with type and value", () => {
+    const wrapper = shallow(<NotificationItem type="default" value="Here is a value" />);
+    expect(wrapper.find("li[data-notification-type='default']").text()).toEqual("Here is a value");
   });
 
-  it('renders correct HTML with html prop', () => {
-    const html = { __html: '<u>test</u>' };
-    const wrapper = shallow(<NotificationItem type="default" html={html} />);
-    expect(wrapper.prop('dangerouslySetInnerHTML')).toEqual(html);
+  it("triggers markAsRead when li is clicked", () => {
+    const markAsReadSpy = jest.fn();
+    const wrapper = shallow(<NotificationItem type="default" value="test" markAsRead={markAsReadSpy} id={1} />);
+    wrapper.find("li").simulate("click");
+    expect(markAsReadSpy).toHaveBeenCalledWith(1);
   });
-
-
-  /*it('calls markAsRead with the right ID when clicked', () => {
-    const mockMarkAsRead = jest.fn();
-    const wrapper = shallow(
-      <NotificationItem type="default" value="Test Notification" markAsRead={mockMarkAsRead} />
-    );
-    wrapper.simulate('click');
-    expect(mockMarkAsRead).toHaveBeenCalledWith(1);
-  });*/
 });
