@@ -114,6 +114,12 @@ const styles = StyleSheet.create({
     borderTop: '5px solid #E1003C',
     padding: '5px 0',
   },
+  footer: {
+    padding: '20px 0',
+    display: 'flex',
+    justifyContent: 'center',
+    fontStyle: 'italic',
+  },
 });
 
 App.defaultProps = {
