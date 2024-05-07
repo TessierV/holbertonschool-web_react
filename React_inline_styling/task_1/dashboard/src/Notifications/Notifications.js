@@ -5,6 +5,7 @@ import NotificationItem from './NotificationItem';
 import NotificationItemShape from './NotificationItemShape';
 import { StyleSheet, css } from 'aphrodite';
 
+
 class Notifications extends Component {
   constructor(props) {
     super(props);
