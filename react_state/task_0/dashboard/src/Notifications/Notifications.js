@@ -184,6 +184,9 @@ const styles = StyleSheet.create({
 
 Notifications.propTypes = {
   listNotifications: PropTypes.arrayOf(NotificationItemShape),
+  displayDrawer: PropTypes.bool,
+  handleDisplayDrawer: PropTypes.func,
+  handleHideDrawer: PropTypes.func,
 };
 
 export default Notifications;
