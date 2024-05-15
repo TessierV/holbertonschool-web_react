@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Notifications from '../Notifications/Notifications';
 import Login from '../Login/Login';
 import Footer from '../Footer/Footer';
@@ -6,7 +7,6 @@ import Header from '../Header/Header';
 import { getLatestNotification } from '../utils/utils';
 import { StyleSheet, css } from 'aphrodite';
 import CourseList from '../CourseList/CourseList';
-import PropTypes from 'prop-types';
 import BodySection from '../BodySection/BodySection';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 
@@ -14,6 +14,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.handleLogout = this.handleLogout.bind(this);
+    this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
+    this.handleHideDrawer = this.handleHideDrawer.bind(this);
+    this.state = { displayDrawer: false };
   }
 
   componentDidMount() {
@@ -36,8 +39,17 @@ class App extends Component {
     }
   }
 
+  handleDisplayDrawer() {
+    this.setState({ displayDrawer: true });
+  }
+
+  handleHideDrawer() {
+    this.setState({ displayDrawer: false });
+  }
+
   render() {
-    const { isLoggedIn, displayDrawer } = this.props;
+    const { isLoggedIn } = this.props;
+    const { displayDrawer } = this.state;
 
     const listCourses = [
       { id: 1, name: 'ES6', credit: 60 },
@@ -56,7 +68,7 @@ class App extends Component {
         <div className={css(styles.App)}>
           <div className={css(styles['App-head'])}>
             <Header />
-            <Notifications displayDrawer={displayDrawer} listNotifications={listNotifications} />
+            <Notifications displayDrawer={displayDrawer}  handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer} listNotifications={listNotifications} />
           </div>
           <div className={css(styles['App-body'], styles.border)}>
             {isLoggedIn === false ?
