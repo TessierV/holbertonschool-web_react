@@ -6,11 +6,11 @@ This project is a React Redux application that utilizes action creators, normali
 
 # Setup Instructions:
 
-Clone the repository to your local machine.
-Navigate to the project directory.
-Install dependencies using ``npm install``.
-Run the application using ``npm start``.
-Run tests using ``npm test``.
+- Clone the repository to your local machine.
+- Navigate to the project directory.
+- Install dependencies using ``npm install``.
+- Run the application using ``npm start``.
+- Run tests using ``npm test``.
 
 # Tasks:
 0. Read data from a JSON
