@@ -6,6 +6,12 @@ TypeScript serves as a foundational tool for ensuring type safety and enhancing 
 # 2 - Webpack
 This project focuses on setting up and configuring Webpack for a basic web development environment.
 
+# 8 - React Redux Action Creator + Normalizr
+This project is a React Redux application that utilizes action creators, normalizr for data normalization, and various other Redux concepts. It focuses on implementing Redux actions, async actions, and writing tests for Redux components.
+
+# 9 - React Redux Reducer + Selector
+This project aims to demonstrate the use of Redux to manage the global state of a React application, using reducers, selectors, Immutable.js, and Normalizr. You will learn how to create pure reducers, avoid state mutations, and normalize and select data efficiently.
+
 <br><br>
 
 <br/><hr>
