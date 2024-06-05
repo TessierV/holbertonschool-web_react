@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   render() {
-    const { isLoggedIn, displayDrawer, displayNotificationDrawer, hideNotificationDrawer } = this.props;
+    const { isLoggedIn, displayDrawer, hideNotificationDrawer } = this.props;
 
     const listCourses = [
       { id: 1, name: 'ES6', credit: 60 },
@@ -61,7 +61,6 @@ class App extends Component {
             <Notifications
               displayDrawer={displayDrawer}
               listNotifications={listNotifications}
-              handleDisplayDrawer={displayNotificationDrawer}
               handleHideDrawer={hideNotificationDrawer}
             />
           </div>
@@ -127,7 +126,6 @@ App.defaultProps = {
   isLoggedIn: false,
   logOut: () => { },
   displayDrawer: false,
-  displayNotificationDrawer: () => {},
   hideNotificationDrawer: () => {},
 };
 
@@ -135,7 +133,6 @@ App.propTypes = {
   isLoggedIn: PropTypes.bool,
   displayDrawer: PropTypes.bool,
   logOut: PropTypes.func,
-  displayNotificationDrawer: PropTypes.func,
   hideNotificationDrawer: PropTypes.func,
 };
 
